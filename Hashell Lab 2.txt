@@ -1,0 +1,61 @@
+--Write a Haskell function that takes two lists and returns the maximum value in 
+these lists.
+
+q1 list1 list2 =maximum(list1++list2)
+
+
+--Write a Haskell function that takes an item and a list. It then checks if the item 
+exists in the list. If the item exists in the list, the function returns the list directly. If the 
+item does not exist, the function adds the item to the list and returns the updated 
+list.
+
+q2 list num= if ((elem num list)==True) then  list
+              else list++[num]
+
+
+--Write a function takes two points as a tuple such as; (x1, y1) and (x2, y2) with their x 
+and y coordinates and calculate the distance between the points
+
+square x=x*x
+tuplefunc tup1 tup2= sqrt(square (fst tup2 - fst tup1) + square (snd tup2 - snd tup1))
+
+
+
+--Anonymous Inc. has classified its employees into four categories, and has the 
+following salary policy: 
+Class 1:
+Class 2 or 3:
+Class 4:
+$10 per hour for regular hours and no overtime
+$7 per hour for regular hours and overtime hours at the rate of 
+1.5 times regular hours
+$5 per hour for regular hours, and overtime hours at the rate of 
+2.0 times the rate for the regular hours.
+Write a Haskell function that takes an employee's classification and regular and 
+overtime hours and returns the employee's pay.
+
+
+
+payment classes hour overtime
+         | (classes==1) =hour*10
+         | (classes==2) || (classes==3) =(hour*7)+(overtime*10.5)
+         | otherwise= 5* hour+10*overtime
+
+
+--Implement the power function recursively without using ** or ^ operator, where 
+power x y evaluates xy.
+
+
+power x 0= 1
+power x y=x*(power x (y-1))
+
+
+--Write a function that takes a string and returns the number of vowels in the string.
+
+find x=length[xs | xs <- x, elem xs ['a','e','u','i','o']]
+
+
+
+
+
+
