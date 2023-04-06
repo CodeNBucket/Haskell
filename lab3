@@ -1,6 +1,0 @@
---Write a Haskell function which returns the minimum value in the given Tree.
-
-data Tree= EmptyTree| Node Int Tree Tree deriving (Show,Eq)
-finder (Node a l r)=if l==EmptyTree 
-                   then a
-                   else finder l
