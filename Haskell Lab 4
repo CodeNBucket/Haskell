@@ -1,0 +1,16 @@
+
+--Implement a function which takes a list and returns the number of numeric characters in
+the list. Try to solve this question in two different ways, one with recursion and one with list
+comprehension.
+
+import Data.Char (isDigit)
+
+countNumbersR []=0
+countNumbersR (x:xs)= if isDigit x==True
+                       then 1+countNumbersR xs
+                     else
+                       countNumbers xs
+
+
+countNumbersC x=length [xs|xs<-x,isDigit xs]
+
