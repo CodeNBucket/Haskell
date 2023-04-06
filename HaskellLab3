@@ -1,7 +1,6 @@
 
 
 --Write a Haskell function which takes a list of numbers and generates a binary tree. 
-Hint: You can use the insertElement function
 
 insertElement x EmptyTree= Node x EmptyTree EmptyTree
 insertElement x (Node a l r)= if x==a then (Node a l r) 
